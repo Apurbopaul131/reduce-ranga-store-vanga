@@ -22,7 +22,7 @@ const showProducts = (products) => {
 
    for (const product of allProducts) {
       const image = product.image;
-      console.log(image);
+      // console.log(image);
       const div = document.createElement('div');
       div.classList.add('product');
       div.innerHTML = `<div class="single-product">
@@ -46,7 +46,9 @@ let count = 0;
 
 const addToCart = (id, price) => {
    count = count + 1;
-   updatePrice('price', value);
+   console.log(count);
+   console.log(id,price);
+   updatePrice('price', price);
 
    updateTaxAndCharge();
    document.getElementById('total-Products').innerText = count;
